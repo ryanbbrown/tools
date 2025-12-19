@@ -1,0 +1,16 @@
+tools.json
+gathered_links.json
+colophon.html
+index.html
+by-month.html
+
+*.egg-info/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Cloudflare Workers
+cloudflare-workers/**/.wrangler/
+cloudflare-workers/**/node_modules/
+cloudflare-workers/**/.mf/
+cloudflare-workers/**/.dev.vars
