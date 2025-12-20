@@ -16,17 +16,7 @@ jobs:
       uses: actions/setup-python@v5
       with:
         python-version: "3.12"
-        cache: 'pip'
-        cache-dependency-path: 'pyproject.toml'
-    - name: Cache Playwright browsers
-      uses: actions/cache@v4
-      with:
-        path: ~/.cache/ms-playwright/
-        key: ${{ runner.os }}-browsers
-    - name: Install dependencies
-      run: |
-        pip install -e .
-        playwright install
-    - name: Run test
-      run: |
-        pytest
+    - name: Install pytest
+      run: pip install pytest
+    - name: Run tests
+      run: pytest
